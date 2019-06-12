@@ -1,6 +1,12 @@
 const fs = require('fs');
 
+/**
+ * Read datafile
+ */
 var list = fs.readFileSync('./data.txt', 'utf-8').replace(/\r/g, '').replace(/\n$/g, '').split('\n');
+/**
+ * Tables data structure
+ */
 var tables = {};
 
 list.forEach((item, i) => {
